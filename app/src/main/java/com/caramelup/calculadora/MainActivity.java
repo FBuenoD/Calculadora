@@ -1,6 +1,7 @@
 package com.caramelup.calculadora;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,6 @@ public class MainActivity extends Activity {
     private Calculadora calculadora = new Calculadora();
     private TextView visor;
     private TextView visorPrincipal;
-    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +27,6 @@ public class MainActivity extends Activity {
         this.visor = (TextView) findViewById(R.id.visor);
         this.visorPrincipal = (TextView) findViewById(R.id.visorPrincipal);
         atualizarVisor();
-
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
-
-        mAdView = findViewById(R.id.ad_view);
-
-        AdRequest adRequest = new AdRequest.Builder().build();
-
-        mAdView.loadAd(adRequest);
     }
 
     @Override

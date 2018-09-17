@@ -6,7 +6,6 @@ import java.text.ParseException;
 
 public class Calculadora implements Serializable {
 
-
     private Operador operador1 = new Operador();
     private Operador operador2 = new Operador();
     private Operacao operacao = null;
